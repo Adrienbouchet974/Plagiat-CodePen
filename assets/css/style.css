@@ -1,0 +1,16 @@
+.codepen {
+    display: flex;
+}
+
+.html_editor {
+    margin-right: 2%;
+}
+
+.css_editor {
+    margin-right: 2%;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}
