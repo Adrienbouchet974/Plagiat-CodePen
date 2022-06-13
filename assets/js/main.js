@@ -1,13 +1,13 @@
-const html = document.querySelector("#html");
-const html_all = document.querySelectorAll("#html");
-const coding_session = document.querySelector("#coding_session")
-console.log(html_all);
-console.log(html);
-
-function entries() {
-    html.addEventListener("keyup", () => {
-        coding_session.textContent = `${html.value}`;
-    })
+function code() {
+    const html = document.getElementById("html");
+    const code = document.getElementById("result").contentWindow.document;
+  
+    document.body.onkeyup = function() {
+      code.open();
+      code.writeln(
+        html.value
+      );
+      code.close();
+    };
 }
-
-entries();
+code();
