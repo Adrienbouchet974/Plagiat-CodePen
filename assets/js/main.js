@@ -53,8 +53,12 @@ function add_color(){
 add_color();
 
 function add_width(){
-
+    const width = document.querySelector("#width");
+    width.addEventListener("click", () => {
+        css.value += "{width: ;}";
+    })
 }
+add_width();
 
 function add_height(){
 
