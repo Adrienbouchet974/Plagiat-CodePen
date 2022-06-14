@@ -1,9 +1,9 @@
 const code = document.getElementById("result").contentWindow.document;
+const html = document.getElementById("html");
+const css = document.getElementById("css");
+const js = document.getElementById("js");
 
 function coding() {
-    const html = document.getElementById("html");
-    const css = document.getElementById("css");
-    const js = document.getElementById("js");
     const new_style = document.createElement("style");
     const new_script = document.createElement("script");
     new_script.setAttribute("type", "text/javascript");
@@ -28,3 +28,40 @@ function coding() {
     }
 }
 coding();
+
+
+function add_bold(){
+    const bold = document.querySelector("#bold");
+    bold.addEventListener("click", () => {
+        html.value += "<b></b>";
+    })
+}
+add_bold();
+
+function add_italic(){
+    const italic = document.querySelector("#italic");
+    italic.addEventListener("click", () => {
+        html.value += "<i></i>";
+    })
+}
+add_italic();
+
+function add_color(){
+
+}
+
+function add_width(){
+
+}
+
+function add_height(){
+
+}
+
+function add_function(){
+
+}
+
+function add_addEventListener(){
+
+}
