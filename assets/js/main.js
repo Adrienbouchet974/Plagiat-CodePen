@@ -2,22 +2,19 @@ const code = document.getElementById("result").contentWindow.document;
 
 function coding() {
     const html = document.getElementById("html");
+    const css = document.getElementById("css");
   
-    document.body.onkeyup = function() {
-      code.open();
-      code.writeln(
-        html.value
-      );
-      code.close();
+    html.onkeyup = function() {
+        code.write(html.value);
+        code.close();
     };
+    const new_style = document.createElement("style");
+
+    css.onkeyup = function() {
+        const style = code.body;
+        console.log(style.querySelector("style"));
+        style.appendChild(new_style);
+        new_style.textContent = `${css.value}`;
+    }
 }
 coding();
-
-function css_editor() {
-    const css = document.getElementById("css");
-    
-    css.addEventListener("click", () => {
-        code.body.classList.add('style');
-    })
-}
-css_editor();
