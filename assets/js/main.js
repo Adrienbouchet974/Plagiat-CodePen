@@ -15,14 +15,12 @@ function coding() {
     
     css.onkeyup = function() {
         const style = code.body;
-        console.log(style.querySelector("style"));
         style.appendChild(new_style);
         new_style.textContent = `${css.value}`;
     }
     
     js.onkeyup = function() {
         const style = code.body;
-        console.log(style.querySelector("script"));
         style.appendChild(new_script);
         new_script.innerText = `${js.value}`;
     }
@@ -47,8 +45,12 @@ function add_italic(){
 add_italic();
 
 function add_color(){
-
+    const color = document.querySelector("#color");
+    color.addEventListener("click", () => {
+        css.value += "{color: ;}";
+    })
 }
+add_color();
 
 function add_width(){
 
