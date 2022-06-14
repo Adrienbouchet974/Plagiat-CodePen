@@ -77,5 +77,9 @@ function add_function(){
 add_function();
 
 function add_addEventListener(){
-
+    const event = document.querySelector("#event");
+    event.addEventListener("click", () => {
+        js.value += 'addEventListener("", () => {})';
+    })
 }
+add_addEventListener();
