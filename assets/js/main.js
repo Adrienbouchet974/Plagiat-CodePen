@@ -61,8 +61,12 @@ function add_width(){
 add_width();
 
 function add_height(){
-
+    const height = document.querySelector("#height");
+    height.addEventListener("click", () => {
+        css.value += "{height: ;}";
+    })
 }
+add_height();
 
 function add_function(){
 
