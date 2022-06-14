@@ -3,11 +3,6 @@ function code() {
     const code = document.getElementById("result").contentWindow.document;
   
     document.body.onkeyup = function() {
-      code.open();
-      code.writeln(
-        html.value
-      );
-      code.close();
-    };
-}
+      code.innerHtml = `${html.value}`;
+}}
 code();
