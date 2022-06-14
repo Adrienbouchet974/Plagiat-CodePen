@@ -69,8 +69,12 @@ function add_height(){
 add_height();
 
 function add_function(){
-
+    const fonction = document.querySelector("#function");
+    fonction.addEventListener("click", () => {
+        js.value += "function() {};";
+    })
 }
+add_function();
 
 function add_addEventListener(){
 
