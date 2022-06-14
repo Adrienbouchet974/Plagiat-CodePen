@@ -1,6 +1,7 @@
-function code() {
+const code = document.getElementById("result").contentWindow.document;
+
+function coding() {
     const html = document.getElementById("html");
-    const code = document.getElementById("result").contentWindow.document;
   
     document.body.onkeyup = function() {
       code.open();
@@ -10,4 +11,13 @@ function code() {
       code.close();
     };
 }
-code();
+coding();
+
+function css_editor() {
+    const css = document.getElementById("css");
+    
+    css.addEventListener("click", () => {
+        code.body.classList.add('style');
+    })
+}
+css_editor();
