@@ -44,6 +44,14 @@ function add_italic(){
 }
 add_italic();
 
+function add_balise_p(){
+    const balise_p = document.querySelector("#balise_p");
+    balise_p.addEventListener("click", () => {
+        html.value += "<p></p>";
+    })
+}
+add_balise_p();
+
 function add_color(){
     const color = document.querySelector("#color");
     color.addEventListener("click", () => {
