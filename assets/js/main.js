@@ -16,9 +16,18 @@ function coding() {
         style.appendChild(new_script);
         code.close();
         if(html.textLength < 200){
+            const test = document.querySelector("#test");
+            test.classList.add("test");
+            test.style.setProperty('--length', (html.textLength/2) + '%');
+            if(html.textLength > 99){
+                test.style.setProperty("border", "5px solid orange");
+            }
+            if(html.textLength > 159){
+                test.style.setProperty("border", "5px solid red");
+            }
 
         }
-        if(html.textLength > 200){
+        if(html.textLength >= 200){
             alert("votre html ne peut pas dépasser 200 caractères");
             return;
         }
