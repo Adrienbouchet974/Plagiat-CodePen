@@ -50,17 +50,17 @@ coding();
 
 function logo(){
     const logo = document.querySelector("#logo");
-    html.addEventListener("mouseover", () => {
+    html.addEventListener("input", () => {
         logo.classList.remove("display");
+        if(html.value == ''){
+            logo.classList.add("display");
+        }
     })
-    html.addEventListener("mouseout", () => {
-        logo.classList.add("display");
-    })
-    css.addEventListener("mouseover", () => {
+    css.addEventListener("input", () => {
         logo.classList.remove("display");
-    })
-    css.addEventListener("mouseout", () => {
-        logo.classList.add("display");
+        if(css.value == ''){
+            logo.classList.add("display");
+        }
     })
 }
 logo();
