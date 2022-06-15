@@ -2,26 +2,34 @@ const code = document.getElementById("result").contentWindow.document;
 const html = document.getElementById("html");
 const css = document.getElementById("css");
 const js = document.getElementById("js");
+const regex_balise = new RegExp('<[^>]+>');
 
 function coding() {
     const new_style = document.createElement("style");
     const new_script = document.createElement("script");
     new_script.setAttribute("type", "text/javascript");
-  
+    
     html.onkeyup = function() {
         code.write(html.value);
+        const style = code.body;
+        style.appendChild(new_style);
+        style.appendChild(new_script);
         code.close();
+        if(html.textLengt > 200){
+            alert("votre html ne peut pas dépasser 200 caractères");
+            return;
+        }
     };
     
     css.onkeyup = function() {
-        const style = code.body;
-        style.appendChild(new_style);
         new_style.textContent = `${css.value}`;
+        if(html.textLength > 200){
+            alert("votre html ne peut pas dépasser 200 caractères");
+            return;
+        }
     }
     
     js.onkeyup = function() {
-        const style = code.body;
-        style.appendChild(new_script);
         new_script.innerText = `${js.value}`;
     }
 }
