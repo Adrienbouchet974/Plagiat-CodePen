@@ -15,6 +15,14 @@
     width: var(--length);
 }
 
+.logo {
+    margin-left: 2%;
+}
+
+.display {
+    display: none;
+}
+
 .html_editor p{
     cursor: pointer;
     text-decoration: underline;
