@@ -13,7 +13,6 @@
 
 .test {
     width: var(--length);
-    border: 5px solid rgb(0, 255, 34);
 }
 
 .html_editor p{
