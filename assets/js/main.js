@@ -48,6 +48,23 @@ function coding() {
 }
 coding();
 
+function logo(){
+    const logo = document.querySelector("#logo");
+    html.addEventListener("mouseover", () => {
+        logo.classList.remove("display");
+    })
+    html.addEventListener("mouseout", () => {
+        logo.classList.add("display");
+    })
+    css.addEventListener("mouseover", () => {
+        logo.classList.remove("display");
+    })
+    css.addEventListener("mouseout", () => {
+        logo.classList.add("display");
+    })
+}
+logo();
+
 
 function add_bold(){
     const bold = document.querySelector("#bold");
