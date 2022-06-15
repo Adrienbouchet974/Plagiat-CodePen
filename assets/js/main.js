@@ -19,6 +19,7 @@ function coding() {
             const test = document.querySelector("#test");
             test.classList.add("test");
             test.style.setProperty('--length', (html.textLength/2) + '%');
+            test.style.setProperty("border", "5px solid green");
             if(html.textLength > 99){
                 test.style.setProperty("border", "5px solid orange");
             }
