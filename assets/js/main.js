@@ -15,7 +15,10 @@ function coding() {
         style.appendChild(new_style);
         style.appendChild(new_script);
         code.close();
-        if(html.textLengt > 200){
+        if(html.textLength < 200){
+
+        }
+        if(html.textLength > 200){
             alert("votre html ne peut pas dépasser 200 caractères");
             return;
         }
