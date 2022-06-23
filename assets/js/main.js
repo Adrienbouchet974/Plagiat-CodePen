@@ -3,17 +3,21 @@ const html = document.getElementById("html");
 const css = document.getElementById("css");
 const js = document.getElementById("js");
 const regex_balise = new RegExp('<[^>]+>');
+const new_script = document.createElement("script");
+new_script.setAttribute("type", "text/javascript");
+document.body.appendChild(new_script);
+
+js.addEventListener("change", () => {
+    new_script.innerHTML = js.value;
+})
 
 function coding() {
     const new_style = document.createElement("style");
-    const new_script = document.createElement("script");
-    new_script.setAttribute("type", "text/javascript");
     
     html.onkeyup = function() {
         code.write(html.value);
         const style = code.body;
         style.appendChild(new_style);
-        style.appendChild(new_script);
         code.close();
         if(html.textLength < 200){
             const test = document.querySelector("#test");
@@ -40,10 +44,6 @@ function coding() {
             alert("votre html ne peut pas dépasser 200 caractères");
             return;
         }
-    }
-    
-    js.onkeyup = function() {
-        new_script.innerText = `${js.value}`;
     }
 }
 coding();
